@@ -1,0 +1,37 @@
+body{
+    background-color: hsl(0, 9%, 76%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.digit{
+    font-size: 150px;
+    font-weight: bold;
+}
+.txt{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.btns{
+    margin-top: 40px;
+    text-align: center;
+}
+.btn{
+    padding: 15px 45px;
+    font-size: 18px;
+    margin: 0 60px;
+    color: azure;
+    border: 0;
+    cursor: pointer;
+}
+#start{
+    background-color: hsl(120, 32%, 55%);
+}
+#stop{
+    background-color: hsl(240, 42%, 51%);
+}
+#reset{
+    background-color: rgb(145, 70, 70);
+}
