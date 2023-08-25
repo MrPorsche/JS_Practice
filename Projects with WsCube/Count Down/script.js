@@ -25,3 +25,9 @@ setInterval(
     },
     1000
 )
+
+const currentTime = document.querySelector('#time span')
+
+setInterval(() => {
+	currentTime.innerText = new Date().toLocaleString()
+}, 1000);
