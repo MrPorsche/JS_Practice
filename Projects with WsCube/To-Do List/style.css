@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Fasthand&family=Grape+Nuts&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./background-image.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    background-color: #817C7CAD;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#item {
+    width: 100%;
+    display: block;
+    background-color: #F5DEB3;
+    border-radius: 50px;
+    box-shadow: 1px -1px 1px 1px;
+    padding: 5px;
+    padding-left: 25px;
+    border: none;
+    font-size: 24px;
+}
+
+#to-do {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#to-do li {
+    position: relative;
+    width: 95%;
+    padding: 5px 40px 10px 15px;
+    border-radius: 5px;
+    box-shadow: -3px -1px 5px;
+    font-family: 'Grape Nuts', sans-serif;
+    font-size: 30px;
+    text-align: justify;
+    user-select: none;
+}
+
+#to-do li i {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    color: #080808;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #A51E06;
+}
