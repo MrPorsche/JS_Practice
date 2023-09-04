@@ -9,19 +9,19 @@ const questions = [
     },
     {
         'que': 'When was JavaScript introduced?',
-        'a': '1995',
-        'b': '1996',
-        'c': '1997',
-        'd': 'none of the above',
+        'a': '1994',
+        'b': '1995',
+        'c': '1996',
+        'd': '1997',
         'correct': 'a'
     },
     {
         'que': 'CSS stands for',
-        'a': 'Cascading Stye Sheet',
+        'a': 'Computation Social Science',
         'b': 'Customized Style Support',
-        'c': 'Computation Social Science',
-        'd': 'HTML',
-        'correct': 'd'
+        'c': 'Cascading Stye Sheet',
+        'd': 'none of the above',
+        'correct': 'c'
     }
 ]
 
@@ -32,9 +32,11 @@ let right = 0,
 const queBox = document.getElementById("queBox")
 const optionInputs = document.querySelectorAll('.options')
 const loadQuestion = () => {
+    if(index === total){
+        return endQuiz()
+    }
     reset();
     const data = questions[index]
-    console.log(data);
     queBox.innerText = `${index+1}) ${data.que}`;
     optionInputs[0].nextElementSibling.innerText = data.a;
     optionInputs[1].nextElementSibling.innerText = data.b;
@@ -45,7 +47,7 @@ const loadQuestion = () => {
 const submitQuiz = () => {
     const data = questions[index];
     const ans = getAnswer()
-    if(ans === data.correct){
+    if(ans == data.correct){
         right++;
     } else {
         wrong++
@@ -55,14 +57,16 @@ const submitQuiz = () => {
     return;
 }
 
-function getAnswer() {
+const getAnswer = () => {
+    let answer;
     optionInputs.forEach(
         (input) => {
             if (input.checked) {
-                return input.value;
+                answer = input.value;
             }
         }
-    );
+    )
+    return answer;
 }
 
 const reset = () => {
@@ -81,6 +85,15 @@ const preQuestion = () => {
 const nextQuestion = () => {
     index++;
     loadQuestion()
+}
+
+const endQuiz= () => {
+    document.getElementById("container").innerHTML = `
+    <div style="text-align:center">
+        <h3>Thanks for participating!</h3>
+        <h1>Your score is ${right} / ${total}.</h1>
+    </div>
+    `
 }
 
 loadQuestion()
