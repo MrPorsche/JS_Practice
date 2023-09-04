@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <span id="password">Your Password</span>
+            <div class="box">
+                <div class="left-side">Password Length</div>
+                <div class="right-side">
+                    <input type="number" id="char" max="30" min="20" value="8" name="">
+                </div>
+            </div>
+            <div class="box">
+                <label for="upper-letter">
+                    <div class="left-side">Contains Uppercase</div>
+                </label>
+                <div class="right-side">
+                    <input type="checkbox" id="upper-letter" name="" class="checkbox">
+                </div>
+            </div>
+            <div class="box">
+                <label for="lower-letter">
+                    <div class="left-side">Contains Lowercase</div>
+                </label>
+                <div class="right-side">
+                    <input type="checkbox" id="lower-letter" name="" class="checkbox">
+                </div>
+            </div>
+            <div class="box">
+                <label for="number">
+                    <div class="left-side">Contains Number</div>
+                </label>
+                <div class="right-side">
+                    <input type="checkbox" id="number" name="" class="checkbox">
+                </div>
+            </div>
+            <div class="box">
+                <label for="symbol">
+                    <div class="left-side">Contains Symbol</div>
+                </label>
+                <div class="right-side">
+                    <input type="checkbox" id="symbol" name="" class="checkbox">
+                </div>
+            </div>
+            <div class="box">
+                <button id="btn">
+                    Generate
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
